@@ -7,6 +7,11 @@ backend:
 media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections:
   - name: docs
     label: Docs
