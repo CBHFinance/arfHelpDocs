@@ -9,7 +9,7 @@ const config: Config = {
   favicon: 'https://beverlyhills.org/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://arfhelpdocs.netlify.app/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -44,6 +44,13 @@ const config: Config = {
             require.resolve('./src/css/custom.css'),
             // require.resolve('@infinum/docusaurus-theme/dist/style.css'),
           ] 
+        },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'daily',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
         },
       } satisfies Preset.Options,
     ],
