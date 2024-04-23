@@ -7,6 +7,11 @@ backend:
 media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections:
   - name: docs
     label: Docs
@@ -25,10 +30,13 @@ collections:
         widget: string
       - label: Description
         name: description
+<<<<<<< HEAD
       - label: Image
         name: image
         widget: 'image'
         allow_multiple: false
+=======
+>>>>>>> b8563f009716aad06d580a8ca58094ebf85a4afa
       - label: Body
         name: body
         widget: markdown
@@ -38,6 +46,10 @@ collections:
     editor:
       preview: false
     meta: { path: { widget: string, label: 'Path', index_file: 'index' } }  
+<<<<<<< HEAD
+=======
+
+>>>>>>> b8563f009716aad06d580a8ca58094ebf85a4afa
 # - name: blog
 #   label: "blog"
 #   folder: blog
