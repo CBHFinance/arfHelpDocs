@@ -76,7 +76,7 @@ const config: Config = {
       appId: 'CPYRVWPSN5',
 
       // Public API key: it is safe to commit it
-      apiKey: {{env.ALGOLIA_SEARCH_API_KEY}},
+      apiKey: '0f3a6f56c94901aac58140eb1c47682e',
 
       indexName: 'netlify_c5075186-9693-4c46-ac65-804c28858ea9_main_all',
 
@@ -94,9 +94,6 @@ const config: Config = {
 
       // Optional: path for search page that enabled by default (`false` to disable it)
       searchPagePath: 'search',
-
-      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
-      insights: false,
     },
     // mermaid: {
     //   theme: {light: 'neutral', dark: 'forest'},
