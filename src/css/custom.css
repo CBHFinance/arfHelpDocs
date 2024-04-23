@@ -1,153 +1,81 @@
-@import 'variables.css';
-@import 'fonts.css';
-@import 'patches.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+
+/* You can override the default Infima variables here. */
+:root {
+    --ifm-color-primary: rgb(24, 144, 255);
+    --ifm-color-primary-dark: rgb(21, 132, 235);
+    --ifm-color-primary-darker: rgb(18, 120, 215);
+    --ifm-color-primary-darkest: rgb(6, 100, 187);
+    --ifm-color-primary-light: rgb(45, 154, 255);
+    --ifm-color-primary-lighter: rgb(62, 162, 255);
+    --ifm-color-primary-lightest: rgb(105, 183, 255);
+    /* --ifm-color-primary: rgb(37, 194, 160);
+    --ifm-color-primary-dark: rgb(33, 175, 144);
+    --ifm-color-primary-darker: rgb(31, 165, 136);
+    --ifm-color-primary-darkest: rgb(26, 136, 112);
+    --ifm-color-primary-light: rgb(70, 203, 174);
+    --ifm-color-primary-lighter: rgb(102, 212, 189);
+    --ifm-color-primary-lightest: rgb(146, 224, 208); */
+    --ifm-code-font-size: 95%;
+    --ifm-navbar-background-color: var(--color-purple);
+    --ifm-navbar-height: 64px;
+    --ifm-menu-color-background-active: rgba(255, 255, 255, 0.05);
+    --ifm-menu-color-background-hover: rgba(255, 255, 255, 0.05);
+    --color-purple: #331049;
+    --color-turquoise: #0ccee9;
+    --color-blue: #0b82f0;
+    --color-text-white: white;
+    --color-text-black: #3a3e4a;
+    --color-bg-white: white;
+    --ifm-navbar-sidebar-width: 100%;
+    --ifm-table-cell-padding: 6px 8px;
+    /* aliemir theme overrides start */
+    /* --ifm-scrollbar-thumb-hover-background-color: transparent; */
+    --doc-sidebar-width: 270px !important;
+    --ifm-scrollbar-track-background-color: transparent !important;
+    --ifm-menu-link-padding-horizontal: 0.375rem;
+    --ifm-menu-link-padding-vertical: 0.375rem;
+    --ifm-breadcrumb-item-background-active: transparent;
+    --ifm-breadcrumb-spacing: 0.25rem;
+    --ifm-breadcrumb-padding-horizontal: 0.4rem;
+    --ifm-font-color-base: #3a3e4a;
+    --tutorial-toc-bg-color: #f1f5f9;
+    --tutorial-toc-text-color: #292d3e;
+    --tutorial-toc-text-color-dark: #252527;
+    --tutorial-toc-text-color-light: #6b7280;
+    --prism-background-color: #292d3e;
+    --docusaurus-highlighted-code-line-bg: #dee5ed;
+    --ifm-code-font-size: 85%;
+    --browser-window-bezel-color: #ebedf0;
+    --browser-window-bezel-color-accent: #ebedf0;
+    --ifm-alert-border-radius: 0.25rem;
+    --ifm-alert-shadow: 0.5px 1px 1px 0px rgba(0, 0, 0, 0.15);
+    /* var(--ifm-font-size-base)/var(--ifm-line-height-base) var(--ifm-font-family-base) */
+    --ifm-menu-link-sublist-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23a8a8a8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-up'%3E%3Cpolyline points='18 15 12 9 6 15'%3E%3C/polyline%3E%3C/svg%3E");
+    --primary-font-sans: "Inter";
+    --ifm-font-family-base: var(--primary-font-sans), system-ui, -apple-system,
+        "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif,
+        BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* aliemir theme overrides end */
+    --tutorial-card-bg: var(--ifm-card-background-color);
+    ---tutorial-card-bg-hover: var(--ifm-card-background-color);
 }
 
-.card {
-  min-width: 14rem;
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+    --tutorial-card-bg: #252527;
+    --tutorial-card-bg-hover: #2c2e33;
+    --ifm-font-color-base: #f6f6f9;
+    --docusaurus-highlighted-code-line-bg: #303450;
+    --browser-window-bezel-color: #292d3e;
+    --browser-window-bezel-color-accent: #4e5264;
+    --tutorial-toc-bg-color: #27272a;
+    --tutorial-toc-text-color: #ebedf0;
+    --tutorial-toc-text-color-dark: #f1f1f1;
+    --tutorial-toc-text-color-light: #dddee0;
 }
-
-.card--pointer {
-  cursor: pointer;
-}
-
-.card-radius--md {
-  border-radius: 60px;
-}
-
-.card__image {
-  background: linear-gradient(180deg, #001c56, #074db6);
-  width: 100%;
-  height: auto;
-}
-
-.card__header {
-  text-align: center;
-}
-
-.card__footer {
-  text-align: center;
-}
-
-.card-background:hover {
-  background: var(--ifm-color-emphasis-200);
-}
-
-.link__icon {
-  font-family: 'iota_icons_font' !important;
-  font-size: 2.5rem;
-}
-
-[data-theme='dark'] .link__icon {
-  color: var(--ifm-menu-color);
-}
-
-.markdown {
-  margin: 2rem 0rem;
-}
-
-.menu {
-  border-top: var(--ifm-global-border-width) solid var(--ifm-color-emphasis-200);
-  font-weight: var(--ifm-font-weight-normal);
-  font-size: 0.9rem;
-  margin-top: calc(-1 * var(--ifm-global-border-width));
-  padding-top: calc(1rem + var(--ifm-toc-padding-vertical)) !important;
-}
-
-.menu__link {
-  line-height: 1.25;
-  flex: 1;
-  border-radius: .25rem;
-}
-
-.menu__link--active,
-.navbar__link.active {
-  color: var(--ifm-navbar-link-hover-color);
-  font-weight: var(--ifm-font-weight-semibold);
-}
-
-.menu__link--sublist {
-  margin : 0 !important;
-}
-
-.navbar {
-  border-bottom: var(--ifm-global-border-width) solid
-    var(--ifm-color-emphasis-200);
-}
-
-.navbar__brand {
-  align-self: flex-start;
-  margin: calc(-1 * var(--ifm-navbar-padding-vertical)) 0
-    calc(-1 * var(--ifm-navbar-padding-vertical))
-    calc(-1 * var(--ifm-navbar-padding-horizontal));
-}
-
-.navbar__logo {
-  height: calc(var(--ifm-navbar-height) - var(--ifm-global-border-width) - 5px);
-}
-
-/* Effectively center the logo in the navbar */
-@media (max-width: 996px) {
-  .navbar__brand {
-    margin-left: auto;
-    margin-right: auto;
-    /* Because of absolutely placed search icon */
-    padding-right: 28px;
-  }
-}
-
-.navbar__item {
-  font-family: 'Metropolis Semi Bold';
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-}
-
-.screen-reader-only {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: polygon(0 0, 0 0, 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-}
-
-.table-of-contents,
-.table-of-contents li,
-.table-of-contents ul,
-.table-of-contents__left-border {
-  border: none;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.table-of-contents__link {
-  border-left: var(--ifm-global-border-width) solid var(--ifm-toc-border-color);
-  display: inline-block;
-  padding: var(--ifm-toc-padding-vertical) var(--ifm-toc-padding-horizontal);
-
-  transition-property: border-color, color;
-  transition-duration: var(--ifm-transition-slow);
-  transition-timing-function: var(--ifm-transition-timing-default);
-}
-
-.table-of-contents__link:hover {
-  color: var(--ifm-menu-color-active);
-}
-
-ul ul .table-of-contents__link {
-  padding-left: calc(2 * var(--ifm-toc-padding-horizontal));
-}
-
-.table-of-contents__link--active {
-  border-left-color: var(--ifm-menu-color-active);
-  color: var(--ifm-menu-color-active);
-  font-weight: var(--ifm-font-weight-semibold);
-}
-
