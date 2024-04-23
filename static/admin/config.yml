@@ -10,8 +10,8 @@ public_folder: "/img/" # The src attribute for uploaded media will begin with /i
 collections:
 - name: docs
   label: 'doc'
-  folder: 'docs'
-  identifier_field: 
+  folder: docs
+  identifier_field: title
   extension: md
   widget: "list"
   create: true
