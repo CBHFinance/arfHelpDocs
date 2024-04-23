@@ -6,7 +6,7 @@
     "className": "red",
     "link": {
       "type": "generated-index",
-      "title": "User Guide"
+      "title": "user-guide"
     },
     "customProps": {
       "description": "This description can be used in the swizzled DocCard"
