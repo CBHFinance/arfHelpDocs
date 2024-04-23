@@ -15,7 +15,7 @@ title: 'Overview'
 ### Form Submission & Department Approval
 ```mermaid
 flowchart TD
-  subgraph subgraph_deptApproval["<p style="padding-bottom:20px;">Department Approval</p><br /> "]
+  subgraph subgraph_deptApproval["<p> &nbsp;</p>"]
     A["<p style="width:250px;height:25px;margin:0px;">Request Created</p>"] --> B
     B["<p style="width:250px;height:25px;margin:0px;">Request Submitted to Department</p>"]
     B -- Rejects --x D["Return To Originator"]
