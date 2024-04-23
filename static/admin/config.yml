@@ -33,7 +33,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    sortableFields: ["title", "sidebar_position"]
+    sortable_fields: ["title", "sidebar_position"]
     extension: md
     format: frontmatter
     editor:
