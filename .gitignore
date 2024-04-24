@@ -21,7 +21,3 @@ yarn-error.log*
 
 node_modules
 .env
-
-allSourceAssetsInfo.json
-allFilesInfo.json
-assetInfo.json

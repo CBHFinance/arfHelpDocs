@@ -3,7 +3,9 @@ backend:
   branch: main 
   repo: CBHFinance/arfHelpDocs
 
+
 # These lines should *not* be indented
+local_backend: true
 media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
 
@@ -18,6 +20,7 @@ collections:
     label_singular: Doc
     folder: docs
     create: true
+    identifier_field: title
     nested:
       depth: 4 
       summary: '{{title}}' 
@@ -28,17 +31,29 @@ collections:
       - label: Title
         name: title
         widget: string
+      - label: slug
+        name: slug
+        widget: string
       - label: Description
         name: description
+        required: false
       - label: Body
         name: body
         widget: markdown
+
     sortable_fields: ["title", "sidebar_position"]
     extension: md
     format: frontmatter
     editor:
       preview: false
     meta: { path: { widget: string, label: 'Path', index_file: 'index' } }  
+
+  # - name: categories
+  #   label: Categories
+  #   label_singular: Category
+  #   files:
+  #     - 
+
 
   # - name: sidebar
   #   label: sidebar
