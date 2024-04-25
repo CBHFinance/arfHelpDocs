@@ -4,5 +4,5 @@ title: Entering Requests
 description: Entering Requests
 slug: /user-guide/enter-requests
 ---
-Entering Requests.
 
+![Add Request](../../static/img/addRequestButton.png)
