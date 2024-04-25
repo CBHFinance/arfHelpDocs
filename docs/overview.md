@@ -5,102 +5,107 @@ slug: /
 title: 'Overview'
 
 ---
-
-
 # Overview
 
 
-## Appointment Request Process
+## User Interface
 
-### Form Submission & Department Approval
+The homepage for the Appointment Request form will display a list of existing form entries, with a navigation pane on the left, where all areas of the application are accessible.
+
+The nagivation pane contents will vary based on the users access.
+
+![](../static/img/user-home-page.png)
+
+
+## Form Process
+When a form is created and submitted, it goes through several approval steps. 
+
+### Department Approval
+
 ```mermaid
 flowchart TD
   subgraph subgraph_deptApproval["<p> &nbsp;</p>"]
-    A["<p style="width:250px;height:25px;margin:0px;">Request Created</p>"] --> B
-    B["<p style="width:250px;height:25px;margin:0px;">Request Submitted to Department</p>"]
+    A["Request Created"] --> B
+    B["Request Submitted to Department"]
     B -- Rejects --x D["Return To Originator"]
     B -- Approves --> C["Submitted to Finance For Approval"]
   end 
-    style A color:#00B8D9, fill:#CAFDF5,stroke:#003768
-    style B color:#B76E00, fill:#FFF5CC,stroke:#FFAB00
+    style A color:#003768, fill:#CAFDF5,stroke:#003768
+    style B color:#503001, fill:#FFF5CC,stroke:#FFAB00
     style D color:#B71D18,fill:#FFE9D5,stroke:#B71D18
-    style C color:#118D57,stroke:#22C55E,fill:#D3FCD2
+    style C color:#118D57,fill:#D3FCD2,stroke:#22C55E
     style subgraph_deptApproval fill:none
     linkStyle 1 stroke:#B71D18,fill:none
     linkStyle 2 stroke:#22C55E,fill:none
 ```
 
+Once the department approval is complete, the person who who submitted the request will be notified via email of the outcome.
+
 ### Finance Approval
+
 ```mermaid
 flowchart TD
  subgraph subgraph_financeApproval["<p> &nbsp;</p>"]
-        A["<p style="width:250px;height:25px;margin:0px;">Request Submitted to Finance</p>"]
+        A["Request Submitted to Finance"]
         D["Return To Originator"]
         C["Submitted to HR For Approval"]
   end
     A -- Rejects --x D
     A -- Approves --> C
-    style A color:#B76E00, fill:#FFF5CC,stroke:#FFAB00
+    style A color:#503001, fill:#FFF5CC,stroke:#FFAB00
     style D color:#B71D18,fill:#FFE9D5,stroke:#B71D18
     style C color:#118D57,stroke:#22C55E,fill:#D3FCD2 
     style subgraph_financeApproval fill:none
     linkStyle 0 stroke:#B71D18,fill:none
     linkStyle 1 stroke:#22C55E,fill:none
 ```
+Once the finance approval is complete, the person who who submitted the request will be notified via email of the outcome.
+
 
 ### HR Approval
 
 ```mermaid
 flowchart TD
  subgraph subgraph_hrApproval["<p> &nbsp;</p>"]
-        A["<p style="width:250px;height:25px;margin:0px;">Request Submitted to HR</p>"]
+        A["Request Submitted to HR"]
         B["Return To Originator"]
         C["Complete"]
         D["Sent to City Manager For Approval"]
   end
     A -- Rejects --x B
     A -- Approves --> C & D
-    style A color:#B76E00, fill:#FFF5CC,stroke:#FFAB00
+    style A color:#503001, fill:#FFF5CC,stroke:#FFAB00
     style B color:#B71D18,fill:#FFE9D5,stroke:#B71D18
     style C color:#118D57,stroke:#22C55E,fill:#D3FCD2 
-    style D color:#B76E00, fill:#FFF5CC,stroke:#FFAB00
+    style D color:#503001, fill:#FFF5CC,stroke:#FFAB00
     style subgraph_hrApproval fill:none
     linkStyle 0 stroke:#B71D18,fill:none
     linkStyle 1 stroke:#22C55E,fill:none
     linkStyle 2 stroke:#22C55E,fill:none
 ```
-### City Manager Approval
 
+Once the HR approval is complete, the person who who submitted the request will be notified via email of the outcome.
+
+### City Manager Approval
 
 ```mermaid
 flowchart TD
  subgraph subgraph_cmApproval["<p> &nbsp;</p>"]
-        A["<p style="width:250px;height:25px;margin:0px;">Request Submitted to City Manager</p>"]
+        A["Request Submitted to City Manager"]
         D["Return To Originator"]
         C["Complete"]
   end
     A -- Rejects --x D
     A -- Approves --> C
-    style A color:#B76E00, fill:#FFF5CC,stroke:#FFAB00
+    style A color:#503001, fill:#FFF5CC,stroke:#FFAB00
     style D color:#B71D18,fill:#FFE9D5,stroke:#B71D18
     style C color:#118D57,stroke:#22C55E,fill:#D3FCD2 
     style subgraph_cmApproval fill:none
     linkStyle 0 stroke:#B71D18,fill:none
     linkStyle 1 stroke:#22C55E,fill:none
 ```
+Once the City Manager approval is complete (if HR sent the request to the City Manager), the person who who submitted the request will be notified via email of the outcome.
 
+## IT Setup
 
-## User Interface
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
+Once the form has completed all of the approval steps, it is sent to IT for user setup. Once completed, the person who submitted the appointment request as well as HR will be notified by email.
