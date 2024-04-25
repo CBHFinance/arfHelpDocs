@@ -78,19 +78,14 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-    // algolia: {
-    //   // The application ID provided by Algolia
-    //   appId: 'TV8DPDGDW5',
-    //   apiKey: '6a72d652c6623319efce02cc81473255',
-    //   indexName: 'ARFHelpDocsSearch',
-    //   contextualSearch: true,
-    // },
-    // mermaid: {
-    //   theme: {light: 'neutral', dark: 'forest'},
-    //   options: {
-    //     maxTextSize: 50,
-    //   },
-    // },
+    algolia: {
+      // The application ID provided by Algolia
+      appId: 'TV8DPDGDW5',
+      apiKey: '6a72d652c6623319efce02cc81473255',
+      indexName: 'ARFHelpDocsSearch',
+      contextualSearch: true,
+    },
+
   } satisfies Preset.ThemeConfig,
 };
 
