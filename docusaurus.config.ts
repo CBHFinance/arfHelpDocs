@@ -83,7 +83,7 @@ const config: Config = {
       appId: 'TV8DPDGDW5',
       apiKey: 'fd909b1150fc990a91fe508e87107104',
       indexName: 'arfhelpnetlify',
-      contextualSearch: true,
+      contextualSearch: false,
     },
 
   } satisfies Preset.ThemeConfig,
