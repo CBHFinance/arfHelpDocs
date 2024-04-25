@@ -1,6 +1,5 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
-import tailwindPlugin from "./plugins/tailwind-plugin.cjs";
 import type {Options as DocsOptions} from '@docusaurus/plugin-content-docs';
 import type * as Preset from '@docusaurus/preset-classic';
 
@@ -62,8 +61,6 @@ const config: Config = {
     mermaid: true,
   },
   themes: ['@docusaurus/theme-mermaid'],
-
-  plugins: [tailwindPlugin],
 
   themeConfig: {
     image: 'img/cbh_arfDocs_socialCard.png',

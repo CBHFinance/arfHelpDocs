@@ -1,0 +1,172 @@
+# # local_backend: true
+
+# backend:
+#   name: github
+#   branch: main 
+#   repo: CBHFinance/arfHelpDocs
+
+# # These lines should *not* be indented
+# media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
+# public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
+
+# slug:
+#   encoding: "ascii"
+#   clean_accents: true
+#   sanitize_replacement: "_"
+
+# collections: 
+#   - name: 'admin-guide'
+#     label: 'Admin Guide'
+#     folder: 'docs/admin-guide'
+#     fields: 
+#       - label: Sidebar position
+#         name: sidebar_position
+#         widget: number
+#       - label: Title
+#         name: title
+#         widget: string
+#       - label: slug
+#         name: slug
+#         widget: string
+#       - label: Description
+#         name: description
+#         required: false
+#       - label: Body
+#         name: body
+#         widget: markdown
+
+
+#   # - name: categories 
+#   #   label: Categories
+#   #   fields: 
+#   #     - label: Title
+#   #       name: title 
+#   #       widget: string
+#   #     - label: "Link Type"
+#   #       name: "link"
+#   #       widget: "select"
+#   #       options: 
+#   #         - {label: "None",value: "none"}
+#   #         - {label: "Document", value: "doc" }
+#   #         - {label: "Generated Index", value: "generated"}
+#   #     - label: "Document"
+#   #       name: "docLink"
+#   #       widget: 'relation'
+#   #       value_field: "name"
+
+#   # - name: "tags"
+#   #   label: "Tags"
+#   #   widget: "list"
+#   #   allow_add: true
+#   #   default: ["news"]
+#   #   fields:
+#   #     - label: "None"
+#   #       name: "none"
+#   #     - label: "Document"
+#   #       name: "doc"
+#   #     - label: "Generated Index"
+#   #       name: "generated"
+
+#   # - name: 'user-guide'
+#   #   label: 'User Guide'
+#   #   description: ''
+#   #   folder: 'docs/user-guide'
+#   #   slug: '{{slug}}'
+#   #   create: true
+#   #   fields: 
+#       # - label: Sidebar position
+#       #   name: sidebar_position
+#       #   widget: number
+#       # - label: Title
+#       #   name: title
+#       #   widget: string
+#       #   default: ''
+#       # - label: Description
+#       #   name: description 
+#       #   widget: string 
+#       #   required: false 
+#       #   default: ''
+#       # - label: slug
+#       #   name: slug
+#       #   widget: string
+#       # - label: Description
+#       #   name: description
+#       #   required: false
+#       # - label: Body
+#       #   name: body
+#       #   widget: markdown
+#       # - label: Tags
+#       #   name: tags
+#       #   # type: 'relation'
+#       #   widget: categories
+#       #   collection: 'tags'
+#       #   default: ''
+#       #   separator: __
+#       #   search_fields: ['title']
+#       #   display_fields: ['title']
+#       #   value_field: 'id'
+#       #   required: false 
+
+      
+
+
+
+#   # - name: 'admin-guide'
+#   #   label: 'Admin Guide'
+#   #   folder: 'docs/admin-guide'
+#   #   fields: 
+#   #     - label: Sidebar position
+#   #       name: sidebar_position
+#   #       widget: number
+#   #     - label: Title
+#   #       name: title
+#   #       widget: string
+#   #     - label: slug
+#   #       name: slug
+#   #       widget: string
+#   #     - label: Description
+#   #       name: description
+#   #       required: false
+#   #     - label: Body
+#   #       name: body
+#   #       widget: markdown
+
+
+#   # - name: docs
+#   #   label: Docs
+#   #   label_singular: Doc
+#   #   folder: docs
+#   #   create: true
+#   #   identifier_field: title
+#   #   # nested:
+#   #   #   depth: 4 
+#   #   #   summary: '{{title}}' 
+#   #   fields:
+#   #     - label: Sidebar position
+#   #       name: sidebar_position
+#   #       widget: number
+#   #     - label: Title
+#   #       name: title
+#   #       widget: string
+#   #     - label: slug
+#   #       name: slug
+#   #       widget: string
+#   #     - label: Description
+#   #       name: description
+#   #       required: false
+#   #     - label: Body
+#   #       name: body
+#   #       widget: markdown
+
+#   #   sortable_fields: ["title", "sidebar_position"]
+#   #   extension: md
+#   #   format: frontmatter
+#   #   editor:
+#   #     preview: false
+#   #   meta: { path: { widget: string, label: 'Path', index_file: 'index' } }  
+
+#   # - name: categories
+#   #   label: Categories
+#   #   label_singular: Category
+#   #   files:
+#   #     - 
