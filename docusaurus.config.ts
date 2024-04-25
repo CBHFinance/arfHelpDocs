@@ -81,8 +81,8 @@ const config: Config = {
     algolia: {
       // The application ID provided by Algolia
       appId: 'TV8DPDGDW5',
-      apiKey: '6a72d652c6623319efce02cc81473255',
-      indexName: 'ARFHelpDocsSearch',
+      apiKey: 'fd909b1150fc990a91fe508e87107104',
+      indexName: 'arfhelpnetlify',
       contextualSearch: true,
     },
 
