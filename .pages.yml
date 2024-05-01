@@ -7,7 +7,6 @@ content:
     sortableFields: ['title', 'slug','sidebar_position']
     view:
       fields: [ title, slug, sidebar_position, published, ]
-    sortableFields: ['title', 'slug','sidebar_position']
     fields:
       - name: published
         label: Published
