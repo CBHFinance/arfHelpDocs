@@ -31,7 +31,14 @@ content:
       - name: body
         label: Body
         type: rich-text
-        
+  - name: sidebar_config
+    label: Sidebar Config
+    path: _sidebarConfig.json
+    type: file
+    fields: 
+      - name: content
+        label: Content
+        type: object
   - name: config
     label: Site Config
     path: _config.yml
@@ -52,3 +59,4 @@ content:
         label: Preview image
         type: image
         description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
+        
