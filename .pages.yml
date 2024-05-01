@@ -11,9 +11,9 @@ content:
         label: Published
         type: boolean
         default: true
-      - name: date
-        label: Date
-        type: date
+      - name: sidebar_position
+        label: Sidebar Position
+        type: number
       - name: title
         label: Title
         type: string
