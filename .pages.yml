@@ -21,6 +21,11 @@ content:
         label: Published
         type: boolean
         default: true
+
+      - name: id
+        label: ID
+        type: string
+        default: {fields.slug}
         
       - name: sidebar_position
         label: Sidebar Position
