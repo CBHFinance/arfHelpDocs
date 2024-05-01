@@ -6,27 +6,41 @@ content:
     path: 'docs'
     sortableFields: ['title', 'slug','sidebar_position']
     view:
-      fields: [ title, sidebar_position, published, ]
+      fields: [ title, slug, sidebar_position, published, ]
+    sortableFields: ['title', 'slug','sidebar_position']
     fields:
       - name: published
         label: Published
         type: boolean
         default: true
+        
       - name: sidebar_position
         label: Sidebar Position
         type: number
+        
       - name: slug
         label: Slug
-        type: string      
+        type: string
+        
       - name: title
         label: Title
         type: string
+        
       - name: description
         label: Description
         type: string
+        
       - name: body
         label: Body
         type: rich-text
+  - name: sidebar_config
+    label: Sidebar Config
+    path: _sidebarConfig.yml
+    type: file
+    fields: 
+      - name: content
+        label: Content
+        type: string
   - name: config
     label: Site Config
     path: _config.yml
@@ -47,3 +61,4 @@ content:
         label: Preview image
         type: image
         description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
+        

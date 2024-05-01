@@ -1,10 +1,10 @@
 ---
+published: true
 sidebar_position: 1
+slug: /enter-requests
 title: Entering Requests
 description: Entering Requests
-slug: /user-guide/enter-requests
 ---
-
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
