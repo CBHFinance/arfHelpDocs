@@ -5,7 +5,7 @@ content:
     type: collection
     path: 'docs'
     view:
-      fields: [ title, published, date,  ]
+      fields: [ title, sidebar_position, published, ]
     fields:
       - name: published
         label: Published
