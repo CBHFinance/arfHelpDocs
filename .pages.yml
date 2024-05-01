@@ -4,7 +4,7 @@ content:
     label: Help Docs
     type: collection
     icon: pen
-    filename: "{fields.title}.md"
+    filename: "{fields.sidebar_position}-{fields.title}.md"
     path: 'docs'
     view:
       fields: [ title, slug, sidebar_position, published, ]
