@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 ## Start a New Form
 From the application homepage, click the New Request Button:
 
-![Add Request](../../static/img/addRequestButton.png)
+![Add Request](../../static/img/userGuideMedia/addRequestButton.png)
 
 
 The form will open and is ready for input. 
@@ -48,21 +48,21 @@ The form is designed to simplify data entry.  Instead of manually inputting posi
 
 To select a position, click the select position button:
 
-![](../../static/img/select-position.png)
+![](../../static/img/userGuideMedia/select-position.png)
 
 A dialog will appear:
 
-![](../../static/img/select-position-dialog.png)
+![](../../static/img/userGuideMedia/select-position-dialog.png)
 
 Positions that are unavailable are italicized in red, and are not selectable. There are filters at the top of the page for department, bargaining unit, and salary grade, as well as a toggle to only show available positions.
 
 Once a position is selected, the selected position is displayed in the Selected Position text box below the table, along with the Position GL string/Allocations.  Before continuing, a salary step must be selected:
 
-![](../../static/img/selected-position.png)
+![](../../static/img/userGuideMedia/selected-position.png)
 
 After selecting a salary step, the annual/monthly/hourly rate information will automatically populate, and the save button at the top of the screen will no longer be disabled:
 
-![](../../static//img/position-save-button.png)
+![](../../static//img/userGuideMedia/position-save-button.png)
 
 Click save, and all of the selected information will transfer to the request form.
 
@@ -77,15 +77,15 @@ The employee setup fields are just text fields.  Specific requests can be noted,
 
 To submit the form, it must first be saved as a draft. 
 
-![](../../static/img/save-as-draft-button.png)
+![](../../static/img/userGuideMedia/save-as-draft-button.png)
 
 
 Once the draft is saved, a new field will appear to upload the NeoGov Requisition PDF:
 
-![](../../static//img/neogov-attachment-box.png)
+![](../../static//img/userGuideMedia/neogov-attachment-box.png)
 
 When you are ready to submit, validate the form first:
 
-![](../../static/img/validate-form-button.png)
+![](../../static/img/userGuideMedia/validate-form-button.png)
 
 If the form is valid, the Submit Request button will no longer be disabled and the form can be submitted. 

@@ -14,7 +14,7 @@ The homepage for the Appointment Request form will display a list of existing fo
 
 The nagivation pane contents will vary based on the users access.
 
-![](../static/img/user-home-page.png)
+![](../static/img/userGuideMedia/user-home-page.png)
 
 
 ## Form Process
