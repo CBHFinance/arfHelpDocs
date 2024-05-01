@@ -45,7 +45,7 @@ content:
         label: Title
         type: string
         required: true
-        width: full
+        width: half
         
       - name: description
         label: Description
