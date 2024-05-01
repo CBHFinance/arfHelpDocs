@@ -33,12 +33,12 @@ content:
         type: rich-text
   - name: sidebar_config
     label: Sidebar Config
-    path: _sidebarConfig.json
+    path: _sidebarConfig.yml
     type: file
     fields: 
       - name: content
         label: Content
-        type: object
+        type: string
   - name: config
     label: Site Config
     path: _config.yml
