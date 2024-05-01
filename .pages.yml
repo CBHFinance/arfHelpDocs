@@ -14,6 +14,9 @@ content:
       - name: sidebar_position
         label: Sidebar Position
         type: number
+      - name: slug
+        label: Slug
+        type: string      
       - name: title
         label: Title
         type: string
