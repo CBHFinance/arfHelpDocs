@@ -29,9 +29,9 @@ The form is comprised of 3 main sections:
 
 
 <Tabs className="formfield-tabs">
-  <TabItem value="Appointee Details">![](../../static/img/appointee-details-fields.png)</TabItem>
-  <TabItem value="Position Details">![](../../static/img/select-position.png)</TabItem>
-  <TabItem value="Employee Setup">![](../../static/img/UserSetupFields.png)</TabItem>
+  <TabItem value="Appointee Details">![](../../static/img/userGuideMedia/appointee-details-fields.png)</TabItem>
+  <TabItem value="Position Details">![](../../static/img/userGuideMedia/select-position.png)</TabItem>
+  <TabItem value="Employee Setup">![](../../static/img/userGuideMedia/UserSetupFields.png)</TabItem>
 </Tabs>
 
 :::tip
@@ -62,7 +62,7 @@ Once a position is selected, the selected position is displayed in the Selected 
 
 After selecting a salary step, the annual/monthly/hourly rate information will automatically populate, and the save button at the top of the screen will no longer be disabled:
 
-![](../../static//img/userGuideMedia/position-save-button.png)
+![](../../static/img/userGuideMedia/position-save-button.png)
 
 Click save, and all of the selected information will transfer to the request form.
 
@@ -82,7 +82,7 @@ To submit the form, it must first be saved as a draft.
 
 Once the draft is saved, a new field will appear to upload the NeoGov Requisition PDF:
 
-![](../../static//img/userGuideMedia/neogov-attachment-box.png)
+![](../../static/img/userGuideMedia/neogov-attachment-box.png)
 
 When you are ready to submit, validate the form first:
 
