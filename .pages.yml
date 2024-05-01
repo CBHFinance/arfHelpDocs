@@ -25,7 +25,7 @@ content:
       - name: id
         label: ID
         type: string
-        default: {fields.slug}
+        default: {fields.title}
         
       - name: sidebar_position
         label: Sidebar Position
