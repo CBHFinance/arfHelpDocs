@@ -50,6 +50,57 @@ content:
         label: Body
         type: rich-text
         required: true
+
+  - name: docs2
+    label: Help Docs Markdown
+    icon: notebook-pen
+    path: 'docs'
+    type: collection
+    filename: "{fields.sidebar_position}-{fields.title}.mdx"
+    
+    view:
+      fields: [ title, slug, sidebar_position, id, published ]
+      primary: title
+      sort: [ title, slug, sidebar_position ]
+      default:
+        search: ''
+        sort: sidebar_position
+        order: asc
+      
+    fields:
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+
+      - name: id
+        label: ID
+        type: string
+        default: {fields.title}
+        
+      - name: sidebar_position
+        label: Sidebar Position
+        type: number
+        
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        
+      - name: title
+        label: Title
+        type: string
+        required: true
+        
+      - name: description
+        label: Description
+        type: string
+        required: false
+        
+      - name: body
+        label: Body
+        type: markdown
+        required: true
         
   - name: sidebar_ts
     label: SidebarConfig2
