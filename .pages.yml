@@ -51,7 +51,7 @@ content:
         label: Description
         type: string
         required: false
-        width: full
+        width: half
         
       - name: body
         label: Body
