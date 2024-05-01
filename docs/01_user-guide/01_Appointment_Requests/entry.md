@@ -5,10 +5,6 @@ slug: /enter-requests
 title: Entering Requests
 description: Entering Requests
 ---
-```mdx-code-block
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-```
 
 # Entering Requests
 
