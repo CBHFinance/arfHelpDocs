@@ -5,6 +5,7 @@ content:
     icon: notebook-pen
     path: 'docs'
     type: collection
+    subfolders: true
     filename: "{fields.sidebar_position}-{fields.title}.mdx"
     
     view:
