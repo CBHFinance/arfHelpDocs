@@ -4,7 +4,6 @@ content:
     label: Help Docs
     type: collection
     path: 'docs'
-    sortableFields: ['title', 'slug','sidebar_position']
     view:
       fields: [ title, slug, sidebar_position, published, ]
     fields:
@@ -32,14 +31,17 @@ content:
       - name: body
         label: Body
         type: rich-text
+        
+  - name: sidebar_ts
+    label: SidebarConfig2
+    path: sidebars.ts
+    type: file
+    
   - name: sidebar_config
     label: Sidebar Config
     path: _sidebarConfig.yml
     type: file
-    fields: 
-      - name: content
-        label: Content
-        type: string
+    
   - name: config
     label: Site Config
     path: _config.yml
