@@ -33,6 +33,11 @@ content:
       - name: body
         label: Body
         type: rich-text
+  - name: sidebar_ts
+    label: SidebarConfig2
+    path: sidebars.ts
+    type: file
+    
   - name: sidebar_config
     label: Sidebar Config
     path: _sidebarConfig.yml
