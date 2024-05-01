@@ -3,9 +3,12 @@ content:
   - name: docs
     label: Help Docs
     type: collection
+    icon: pen
+    filename: "{fields.title}.md"
     path: 'docs'
     view:
       fields: [ title, slug, sidebar_position, published, ]
+      
     fields:
       - name: published
         label: Published
