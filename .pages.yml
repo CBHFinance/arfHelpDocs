@@ -4,7 +4,6 @@ content:
     label: Help Docs
     type: collection
     path: 'docs'
-    sortableFields: ['title', 'slug','sidebar_position']
     view:
       fields: [ title, slug, sidebar_position, published, ]
     sortableFields: ['title', 'slug','sidebar_position']
