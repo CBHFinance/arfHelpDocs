@@ -55,9 +55,9 @@ content:
         
       - name: body
         label: Body
-        type: code
+        type: rich-text
         options:
-          language: markdown
+          format: markdown
         required: true
         width: full
         
