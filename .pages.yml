@@ -8,7 +8,7 @@ content:
     filename: "{fields.sidebar_position}-{fields.title}.mdx"
     
     view:
-      fields: [ title, slug, sidebar_position, published ]
+      fields: [ title, slug, sidebar_position, id, published ]
       primary: title
       sort: [ title, slug, sidebar_position ]
       default:
