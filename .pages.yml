@@ -18,17 +18,6 @@ content:
         order: asc
       
     fields:
-      - name: published
-        label: Published
-        type: boolean
-        default: true
-        width: half
-        
-      - name: sidebar_position
-        label: Sidebar Position
-        type: number
-        width: half
-
       - name: id
         label: ID
         type: string
@@ -40,7 +29,7 @@ content:
         type: string
         required: true
         width: half
-        
+
       - name: title
         label: Title
         type: string
@@ -51,6 +40,17 @@ content:
         label: Description
         type: string
         required: false
+        width: half
+
+      - name: sidebar_position
+        label: Sidebar Position
+        type: number
+        width: half
+        
+      - name: published
+        label: Published
+        type: boolean
+        default: true
         width: half
         
       - name: body
