@@ -56,6 +56,17 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    'plugin-image-zoom',
+    'docusaurus-plugin-auto-sidebars',
+    // 'docusaurus-plugin-typedoc',
+    //   // Plugin / TypeDoc options
+    //   {
+    //     entryPoints: ['../src/index.ts'],
+    //     tsconfig: '../tsconfig.json',
+    //   },
+  ],
+
   markdown: {
     format: 'detect',
     mermaid: true,
@@ -84,6 +95,19 @@ const config: Config = {
       apiKey: '63d62595a4303254b03acfe4e6f8c18d',
       indexName: 'arfhelpnetlify',
       contextualSearch: false,
+    },
+    imageZoom: {
+      // CSS selector to apply the plugin to, defaults to '.markdown img'
+      selector: '.markdown :not(em) > img',
+      // Optional medium-zoom options
+      // see: https://www.npmjs.com/package/medium-zoom#options
+      options: {
+        margin: 24,
+        background: '#BADA55',
+        scrollOffset: 0,
+        container: '#zoom-container',
+        template: '#zoom-template',
+      },
     },
 
   } satisfies Preset.ThemeConfig,
