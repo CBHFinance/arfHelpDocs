@@ -1,12 +1,12 @@
 {
-    "position": 2,
-    "label": "User Guide",
+    "position": 3,
+    "label": "IT Setup Requests",
     "collapsible": true,
     "collapsed": false,
     "className": "red",
     "link": {
       "type": "generated-index",
-      "title": "User Guide"
+      "title": "it-setup"
     },
     "customProps": {
       "description": "This description can be used in the swizzled DocCard"

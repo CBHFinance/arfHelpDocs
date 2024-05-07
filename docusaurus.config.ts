@@ -56,8 +56,8 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           // sidebarPath: require.resolve("./sidebars.js"),
-          // remarkPlugins: [remarkMath],
-          // rehypePlugins: [rehypeKatex],
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: false,
         theme: {
