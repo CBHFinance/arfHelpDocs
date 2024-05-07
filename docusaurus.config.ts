@@ -5,49 +5,86 @@ import rehypeKatex from 'rehype-katex';
 import type {Options as DocsOptions} from '@docusaurus/plugin-content-docs';
 import type * as Preset from '@docusaurus/preset-classic';
 
+
+const lightCodeTheme = prismThemes.github
+const darkCodeTheme = prismThemes.dracula
+
 const config: Config = {
   title: 'Appointment Request Docs',
   tagline: 'Appointment Request Docs',
   favicon: 'https://beverlyhills.org/favicon.ico',
-
-  // Set the production url of your site here
   url: 'https://arfhelpdocs.netlify.app/',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'CBHFinance', // Usually your GitHub org/user name.
-  projectName: 'ARFHelpDocs', // Usually your repo name.
-  trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'warn',
+  trailingSlash: false,
+  // stylesheets: [
+  //   {
+  //     href: '/katex/katex.min.css',
+  //     type: 'text/css',
+  //   },
+  // ],
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve('swc-loader'),
+      options: {
+        jsc: {
+          parser: {
+            syntax: 'typescript',
+            tsx: true,
+          },
+          transform: {
+            react: {
+              runtime: 'automatic',
+            },
+          },
+          target: 'es2017',
+        },
+        module: {
+          type: isServer ? 'commonjs' : 'es6',
+        },
+      },
+    }),
+  },
+
+  plugins: [
+    'docusaurus-plugin-image-zoom',
+  ],
+
+  markdown: {
+    format: 'detect',
+    mermaid: true,
+    mdx1Compat: {
+      // comments: false,
+    },
+    remarkRehypeOptions: {
+      footnoteLabel: '',
+    },
+  },
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   presets: [
     [
       '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
+          sidebarPath: './sidebars.ts',
+          // sidebarPath: require.resolve("./sidebars.js"),
+          // remarkPlugins: [remarkMath],
+          // rehypePlugins: [rehypeKatex],
         },
         blog: false,
         theme: {
-          customCss: [
-            require.resolve('./src/css/custom.css'),
-            // require.resolve('@infinum/docusaurus-theme/dist/style.css'),
-          ] 
+          customCss: './src/css/custom.css',
         },
         sitemap: {
           lastmod: 'date',
@@ -60,26 +97,10 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    'plugin-image-zoom',
-    'docusaurus-plugin-auto-sidebars',
-    // 'docusaurus-plugin-typedoc',
-    //   // Plugin / TypeDoc options
-    //   {
-    //     entryPoints: ['../src/index.ts'],
-    //     tsconfig: '../tsconfig.json',
-    //   },
-  ],
-
-  markdown: {
-    format: 'detect',
-    mermaid: true,
-  },
-  themes: ['@docusaurus/theme-mermaid'],
-
   themeConfig: {
     image: 'img/cbh_arfDocs_socialCard.png',
     navbar: {
+      hideOnScroll: false,
       title: 'ARF Docs',
       logo: {
         alt: 'CBH Shield',
@@ -88,10 +109,21 @@ const config: Config = {
         href: '/',
       },
     },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    // docs: {
+    //   sidebar: {
+    //     hideable: false,
+    //     autoCollapseCategories: true,
+    //   },
+    // },
     footer: {},
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
     },
     algolia: {
       // The application ID provided by Algolia
@@ -100,19 +132,29 @@ const config: Config = {
       indexName: 'arfhelpnetlify',
       contextualSearch: false,
     },
-    imageZoom: {
-      // CSS selector to apply the plugin to, defaults to '.markdown img'
-      selector: '.markdown :not(em) > img',
-      // Optional medium-zoom options
-      // see: https://www.npmjs.com/package/medium-zoom#options
-      options: {
-        margin: 24,
-        background: '#BADA55',
-        scrollOffset: 0,
-        container: '#zoom-container',
-        template: '#zoom-template',
+    zoom: {
+      selector: '.markdown > img',
+      background: {
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(50, 50, 50)'
       },
-    },
+      config: {
+        // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+      }
+    }
+    // imageZoom: {
+    //   // CSS selector to apply the plugin to, defaults to '.markdown img'
+    //   selector: '.markdown :not(em) > img',
+    //   // Optional medium-zoom options
+    //   // see: https://www.npmjs.com/package/medium-zoom#options
+    //   options: {
+    //     margin: 24,
+    //     background: '#BADA55',
+    //     scrollOffset: 0,
+    //     container: '#zoom-container',
+    //     template: '#zoom-template',
+    //   },
+    // },
 
   } satisfies Preset.ThemeConfig,
 };

@@ -1,0 +1,70 @@
+{
+    "label": "docSidebar",
+    "items": [
+        {
+            "title": "User Guide",
+            "link": "generated",
+            "items": [
+                {
+                  "title": "Appointment Requests",
+                  "link": "generated",
+                  "items": [
+                    {
+                      "document": "docs/user-guide/Appointment_Requests/entry",
+                      "_template": "doc"
+                    },
+                    {
+                        "document": "docs/user-guide/Appointment_Requests/tracking",
+                        "_template": "doc"
+                    }
+
+                  ],
+                  "_template": "category"
+                },
+                {
+                  "title": "Approvals",
+                  "link": "generated",
+                  "items": [
+                    {
+                      "document": "docs/user-guide/Approvals/start",
+                      "_template": "doc"
+                    }
+                  ],
+                  "_template": "category"
+                },
+                {
+                  "title": "IT Setup Requests",
+                  "link": "generated",
+                  "items": [
+                    {
+                      "document": "docs/user-guide/IT_Setup_Requests/start",
+                      "_template": "doc"
+                    }
+                  ],
+                  "_template": "category"
+                }
+            ],
+            "_template": "category"
+          },
+          {
+            "title": "Admin Guide",
+            "link": "generated",
+            "items": [
+              {
+                "document": "docs/admin-guide/users",
+                "_template": "doc"
+              },
+              {
+                "document": "docs/admin-guide/approvers",
+                "_template": "doc"
+              },
+              {
+                "document": "docs/admin-guide/approvals",
+                "_template": "doc"
+              }
+  
+            ],
+            "_template": "category"
+          }
+    ]
+  }
