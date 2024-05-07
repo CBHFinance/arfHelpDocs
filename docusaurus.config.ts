@@ -31,29 +31,6 @@ const config: Config = {
     locales: ['en'],
   },
 
-  webpack: {
-    jsLoader: (isServer) => ({
-      loader: require.resolve('swc-loader'),
-      options: {
-        jsc: {
-          parser: {
-            syntax: 'typescript',
-            tsx: true,
-          },
-          transform: {
-            react: {
-              runtime: 'automatic',
-            },
-          },
-          target: 'es2017',
-        },
-        module: {
-          type: isServer ? 'commonjs' : 'es6',
-        },
-      },
-    }),
-  },
-
   plugins: [
     'docusaurus-plugin-image-zoom',
   ],
@@ -114,12 +91,6 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    // docs: {
-    //   sidebar: {
-    //     hideable: false,
-    //     autoCollapseCategories: true,
-    //   },
-    // },
     footer: {},
     prism: {
       theme: lightCodeTheme,

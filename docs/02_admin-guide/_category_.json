@@ -1,12 +1,12 @@
 {
-    "position": 3,
-    "label": "User Guide",
+    "position": 4,
+    "label": "Admin Guide",
     "collapsible": true,
     "collapsed": false,
     "className": "red",
     "link": {
       "type": "generated-index",
-      "title": "user-guide"
+      "title": "admin-guide"
     },
     "customProps": {
       "description": "This description can be used in the swizzled DocCard"
