@@ -18,39 +18,48 @@ content:
         order: asc
       
     fields:
-      - name: published
-        label: Published
-        type: boolean
-        default: true
-
       - name: id
         label: ID
         type: string
         default: {fields.title}
-        
-      - name: sidebar_position
-        label: Sidebar Position
-        type: number
-        
+        width: half
+                
       - name: slug
         label: Slug
         type: string
         required: true
-        
+        width: half
+
       - name: title
         label: Title
         type: string
         required: true
+        width: half
         
       - name: description
         label: Description
         type: string
         required: false
+        width: half
+
+      - name: sidebar_position
+        label: Sidebar Position
+        type: number
+        width: half
+        
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+        width: half
         
       - name: body
         label: Body
         type: rich-text
+        options:
+          format: markdown
         required: true
+        width: full
         
   - name: sidebar_ts
     label: SidebarConfig2
